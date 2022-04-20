@@ -1,0 +1,27 @@
+
+int ledpin = 6;
+int horz = A5;
+int vert = A4;
+#define sel 3
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode(horz, INPUT);
+pinMode(vert, INPUT);
+pinMode(sel, INPUT_PULLUP);
+pinMode(ledpin, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+bool selPressed = digitalRead(sel) == LOW;
+if(sel == HIGH){
+  digitalWrite(ledpin, HIGH);
+  delay(100);
+}
+else(sel == LOW);{
+  digitalWrite(ledpin, LOW);
+  delay(100);
+}
+delay(100);
+}
